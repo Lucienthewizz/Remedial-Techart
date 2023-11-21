@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Remidial Techart Software Engineering</title>
+  <link rel="stylesheet" href="style.css">
+  <!--FONT-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Metal+Mania&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  <!--BOXICONS-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--JAVASCRIPT-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const subscribeButton = document.getElementById('subscribeButton');
+
+    subscribeButton.addEventListener('click', function () {
+    subscribeButton.classList.add('clicked');
+
+    setTimeout(function() {
+      subscribeButton.classList.remove('clicked');
+    }, 90);
+    })
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      function validateEmail(email) {
+        const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return regex.test(email);
+      }
+
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('email');
+        const errorMessage = document.getElementById('error-message');
+
+        if (validateEmail(emailInput.value) && emailInput.value.includes('@') && emailInput.value.endsWith('.com')){
+          window.location.href = 'success.html';
+        } else {
+          errorMessage.textContent = 'Valid Email Required !';
+          emailInput.style.backgroundColor = '#ffb4b4';
+        }
+      }
+
+      const form = document.querySelector('form');
+      form.addEventListener('submit', handleFormSubmit);
+    });
+  </script>
+</head>
+
+<body>
+  <div class="background">
+    
+    <div class="container">
+      <img src="../2305551152_Bahan/half-background.jpeg" alt="half-background">
+    </div>
+
+    <div class="box">
+      <h1>TECHART INSIDER</h1>
+      <h2>We are an organization based on Udayana University, sharing perspectives about the world with students in the engineering faculty.</h2>
+      
+      <ul>
+        <li><p><i class='bx bxs-check-circle'></i>Mainly talk programming, UI/UX, networking, business intelligent.</p></li>
+        <li><p><i class='bx bxs-check-circle'></i>Analyze with AI, with comprehensive algorithms.</p></li>
+        <li><p><i class='bx bxs-check-circle'></i>And many more !!!</p></li>
+      </ul>
+
+      <form action="">
+        <div class="input-container">
+          <label for="emailadress">Email Address :</label>
+          <input type="email" id="email" name="emailadress">
+          <span id="error-message"></span>
+        </div>
+        <button id="subscribeButton" class="button"> Subscribe to Monthly Newsletter</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

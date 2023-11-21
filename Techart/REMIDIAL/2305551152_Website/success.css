@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  background-color: #111111;
+  min-height: 100vh;
+}
+
+.background img {
+  width: 60%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.background {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  background-color: #021833;
+  margin: 40px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.container {
+  width: 60%;
+  height: 1110px;
+  position: absolute;
+  right: 40%; 
+}
+
+.container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; 
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  background-color:#082345;
+  height: 1030px;
+  width: 45%;
+  padding: 3%;
+  border: lightblue 5px solid;
+  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.background .box {
+  margin: 40px;
+}
+
+.box h1 {
+  margin-top: 25%;
+  margin-bottom: 5%;
+  font-size: 80px;
+  color: #ced3da;
+  font-family: 'Metal Mania', sans-serif;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 4px;
+}
+
+.box h2 {
+  margin-bottom: 50px;
+  line-height: 30px;
+  text-align: center;
+  color: #ced3da;
+  font-family: 'Iceberg', sans-serif;
+}
+
+.box h3 {
+  margin-top: 10%;
+  margin-bottom: 50px;
+  line-height: 30px;
+  text-align: center;
+  color: #ced3da;
+  font-family: 'Iceberg', sans-serif;
+  font-size: 45px;
+}
+
+.box {
+  display: block;
+}
+
